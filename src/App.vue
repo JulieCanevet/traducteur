@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <div id='color'></div>
     <textatraduire v-on:traduire="api"></textatraduire>
     <traduction v-bind:someData="someData"></traduction>
   </div>
@@ -35,5 +36,22 @@ export default {
 </script>
 
 <style>
+  body {
+    text-align: center;
+    overflow: hidden;
+  }
 
+  #color {
+    background-color: #46A6A3;
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 40%;
+    top: 0;
+  }
+
+  #app {
+    padding-top: 3em;
+    height: 50vh;
+  }
 </style>
