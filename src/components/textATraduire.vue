@@ -1,15 +1,31 @@
 <template>
   <div id="texte">
-  <input type="text">
+    <form v-on:submit.prevent="traduire">
+      <input type="text" v-model="texte" placeholder="entrez le texte à traduire">
+      <select v-model="langue">
+        <option value="en">Anglais</option>
+        <option value="es">Espagnol</option>
+        <option value="nl">Allemand</option>
+        <option value="ar">Arabe</option>
+      </select>
+      <button type="submit">Traduire</button>
+    </form>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'hello',
+  name: 'textatraduire',
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
+      texte: "",
+      langue: "en"
+    }
+  },
+
+  methods: {
+    traduire() {
+      this.$emit('traduire', this.texte, this.langue)
     }
   }
 }
