@@ -39,6 +39,7 @@ export default {
   body {
     text-align: center;
     overflow: hidden;
+    font-family: 'Open Sans', sans-serif;
   }
 
   #color {

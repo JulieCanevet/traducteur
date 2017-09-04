@@ -53,5 +53,6 @@ input {
 }
 h1 {
   color: #B8D134;
+  letter-spacing: .2em;
 }
 </style>
